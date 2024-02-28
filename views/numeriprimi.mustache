@@ -1,0 +1,33 @@
+<h1>Calcolo numeri primi</h1>
+
+<div class="text-container">
+    <p>Calcolo di tutti i numeri primi minori o uguali di un numero inserito come parametro.</p>
+    <p>Si utilizza l'algoritmo di Erastotene da Cirene (276ac-194ac), noto anche come <a href="https://it.wikipedia.org/wiki/Crivello_di_Eratostene" target="_blank">Crivello di Erastotene</a></p>
+</div>
+<form action="numeriprimi" method="post">
+    <div class="mb-3">    
+        <input type="text" class="form-control" name="numero" id="numero"  placeholder="Numero limite per il calcolo" value={{numero}}>
+    </div>
+    <div class="mb-3 d-flex justify-content-between">
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="soloPrimi" name="soloPrimi" {{#soloPrimi}}checked{{/soloPrimi}}>
+            <label class="form-check-label" for="soloPrimi">Solo numeri primi</label>
+        </div>
+        <div class="error text-warning">{{error}}</div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Calcola">
+        </div>
+    </div>
+</form>
+
+<div class="d-flex flex-wrap justify-content-center w-100">
+    {{#result}}
+
+            {{#primo}}
+                <div class="cella primo">{{numero}}</div>
+            {{/primo}}
+            {{^primo}}
+                <div class="cella nonprimo">{{numero}}</div>
+            {{/primo}}
+    {{/result}}
+</div>

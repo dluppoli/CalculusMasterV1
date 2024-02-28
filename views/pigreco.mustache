@@ -1,0 +1,25 @@
+<h1>Calcolo cifre Pi Greco</h1>
+
+<div class="text-container">
+    <p>Calcolo dei Pi Greco determinando il numero di cifre inserito come parametro.</p>
+    <p>Si utilizza l'algoritmo proposto da Jeremy Gibbons nel 2004 <a href="http://web.comlab.ox.ac.uk/oucl/work/jeremy.gibbons/publications/spigot.pdf" target="_blank">Unbounded Spigot Algorithms for the digits of Pi.</a>
+    Si utilizza la versione piG3 (pag 10), più performante ma non completamente validata.</p>
+    <p></p>
+    <p>NB: Google, con algoritmi differenti, ha calcolato 10<sup>14</sup> cifre utilizzando una GCP. (<a href="https://cloud.google.com/blog/products/compute/calculating-100-trillion-digits-of-pi-on-google-cloud" target="_blank">link</a>) </p>
+</div>
+<form action="pigreco" method="post">
+    <div class="mb-3">    
+        <input type="text" class="form-control" name="numero" id="numero"  placeholder="Numero di cifre da determinare" value={{numero}}>
+    </div>
+    <div class="mb-3 d-flex justify-content-between">
+        <div class="error text-warning">{{error}}</div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Calcola">
+        </div>
+    </div>
+</form>
+{{#result}}
+<div class="piGrecoResult text-container">
+    {{result}}
+</div>
+{{/result}}
