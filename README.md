@@ -126,3 +126,16 @@ gcloud compute instances detach-disk appserver --disk=datadisk --zone=us-central
 gcloud compute instances attach-disk appserver --disk=datadisk2 --zone=us-central1-a
 ```
 
+## Deploy A con Terraform
+1. Caricare il file `startup_script_deployA.sh` in un bucket Cloud Storage esistente o in uno nuovo appositamente creato
+2. Entrare nella cartella `terraform` contenente i file dell'infrastruttura
+3. Editare il file `terraform.tfvars` impostando l'id del progetto GCP e l'indirizzo gs:// del file caricato al punto 1
+4. Eseguire i seguenti comandi terraform
+```sh
+terraform init
+terraform validate
+terraform plan
+terraform apply
+```
+5. Verificare il corretto funzionamento dell'infrastruttura creata
+6. Cancellare l'infrastruttura con `terraform destroy`
