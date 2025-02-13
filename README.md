@@ -1,4 +1,4 @@
-# Laboratorio di piattaforme e metodologie cloud - AA 2023-24
+# Laboratorio di piattaforme e metodologie cloud - AA 2024-25
 Applicazione demo per laboratori di deploy su Google Cloud Platform.
 
 |Versione App|Lezione di riferimento|

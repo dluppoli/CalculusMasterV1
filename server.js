@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 /*Home Page*/
 app.get('/', function (req, res) {
    res.render('index',{ 
-        pageTitle: 'Laboratorio di piattaforme e metodologie cloud - AA 2023-24', is_home: true
+        pageTitle: 'Laboratorio di piattaforme e metodologie cloud - AA 2024-25', is_home: true
     });
 })
 
